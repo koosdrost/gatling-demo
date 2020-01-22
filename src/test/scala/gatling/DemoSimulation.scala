@@ -42,8 +42,8 @@ class DemoSimulation extends Simulation {
 
   // linear rampup of 10 users added over 5 seconds (1 extra user every 500 ms)
   setUp(
-    users.inject(rampUsers(20) during (10 seconds)),
-    admins.inject(rampUsers(2) during (10 seconds))
+    users.inject(rampUsers(10) during (5 seconds)),
+    admins.inject(rampUsers(2) during (5 seconds))
   ).protocols(httpProtocol)
 
 }
